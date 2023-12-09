@@ -1,0 +1,256 @@
+nav {
+    background-color: #242526 !important;
+    /* position: fixed !important; */
+
+}
+
+
+nav img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+}
+
+.nav-comp {
+    display: flex;
+    justify-content: space-between !important;
+    gap: 30%;
+}
+
+.nav-brand {
+    display: flex;
+
+}
+
+nav a {
+    color: white !important;
+}
+
+.fa-house {
+    color: #ffffff;
+    align-self: center;
+    position: relative;
+    top: 8px;
+}
+
+.icons-middle {
+    display: flex;
+    gap: 2rem;
+
+}
+
+.right-icons {
+    display: flex;
+    gap: 2rem;
+}
+
+nav input {
+    background-color: #3a3b3c !important;
+    color: white !important;
+    border-top-left-radius: 50px !important;
+    border-bottom-right-radius: 50px !important;
+    border-bottom-left-radius: 50px !important;
+    border-top-right-radius: 50px !important;
+    outline: none !important;
+    margin-left: 50px;
+}
+
+nav input::placeholder {
+    color: white !important;
+}
+
+nav i {
+    color: white;
+    align-items: center;
+    align-self: center;
+}
+
+
+
+nav i:hover {
+    /* filter: opacity(0.3); */
+    color: #0d6efd;
+}
+
+.small-size-nav {
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    display: none;
+}
+
+/* ================================================== */
+
+/* Main section */
+
+.main-section {
+    width: 100% !important;
+    position: relative;
+    background-color: black !important;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Posts */
+.my-posts {
+    background-color: #f0f2f5;
+    position: relative;
+    overflow-y: auto;
+    max-height: 94.2vh;
+    overflow-wrap: normal;
+}
+.top-posts{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.user-posts {
+    width: 60%;
+    background-color: white;
+    margin: auto;
+    border-radius: 30px;
+    box-shadow: 1px 1px 5px 0px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 30px;
+    position: relative;
+    background-color: #eda;
+}
+
+.user-posts img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 10px;
+}
+
+.name-pfp {
+    display: flex;
+}
+
+.user-posts a {
+    font-weight: bolder;
+}
+
+/* Friends */
+
+.my-friends {
+    background-color: #f0f2f5;
+    position: relative;
+    overflow-y: auto;
+    max-height: 94.2vh;
+}
+
+.upper-contacts {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.friends-container {
+    display: flex;
+}
+
+.my-friends img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 10px;
+}
+
+.friends-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.my-friends a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5px;
+}
+
+.my-friends a:hover {
+    filter: opacity(0.3);
+}
+
+.new-message {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* App section */
+
+.my-app {
+    background-color: #f0f2f5;
+    position: relative;
+    overflow-y: auto;
+    overflow-wrap: normal;
+}
+
+.app-section {
+    margin-top: 160px;
+    margin-left: 50px;
+}
+
+.app-group {
+    display: flex;
+    width: 80%;
+    height: 30px;
+    align-items: center;
+    margin-top: 40px;
+    gap: 1rem;
+}
+
+.my-app a {
+    text-decoration: none;
+    color: black;
+}
+
+.my-app i {
+    /* color: blue; */
+    width: 30px;
+}
+
+.app-group:hover {
+    filter: opacity(0.3);
+}
+
+
+@media screen and (max-width:992px) {
+    .my-app {
+        display: none;
+    }
+
+    .user-posts {
+        width: 90% !important;
+    }
+
+    .small-size-nav {
+        display: block;
+    }
+}
+
+@media screen and (max-width:768) {
+    .my-friends {
+        display: none !important;
+    }
+
+    /* .user-posts {
+        width: 100% !important;
+        
+    } */
+}
