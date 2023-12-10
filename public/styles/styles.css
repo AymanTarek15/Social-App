@@ -102,10 +102,12 @@ nav i:hover {
     max-height: 94.2vh;
     overflow-wrap: normal;
 }
-.top-posts{
+
+.top-posts {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
 .user-posts {
     width: 60%;
     background-color: white;
@@ -191,6 +193,76 @@ nav i:hover {
     justify-content: center;
 }
 
+.messaging-field {
+    position: fixed;
+    bottom: 0px;
+    right: 100px;
+    display: grid;
+}
+
+.messaging-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.messaging-field .messaging-name button {
+    background-color: transparent;
+}
+
+.messaging-field .messaging-name i {
+    color: white;
+}
+
+.messaging-field h4 {
+    color: white;
+    margin-bottom: 0;
+}
+
+.messaging-field .text-area {
+    width: 262px;
+    height: 300px;
+    background-color: #f6f6f6;
+    text-align: left;
+
+    /* display: flex; */
+    /* flex-direction: column;
+    justify-content: end;
+    align-items: end; */
+    /* white-space: pre-line; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    margin: 0;
+}
+
+.message-sent {
+    width: fit-content;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 12px;
+    margin-left: auto;
+    color: white;
+}
+
+.messaging-input {
+    border: 2px solid black;
+
+}
+
+.messaging-field input {
+    width: 230px;
+    border: none;
+}
+
+
+.messaging-field button {
+    text-decoration: none;
+    background-color: white;
+    border: none;
+}
 
 /* App section */
 
@@ -242,11 +314,24 @@ nav i:hover {
     .small-size-nav {
         display: block;
     }
+
+    .small-size-nav::selection {
+        .my-friends {
+            display: block;
+        }
+    }
 }
 
-@media screen and (max-width:768) {
+@media screen and (max-width:768px) {
     .my-friends {
         display: none !important;
+        background-color: black;
+    }
+
+    .small-size-nav::selection {
+        .my-friends {
+            display: block;
+        }
     }
 
     /* .user-posts {

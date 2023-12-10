@@ -40,10 +40,10 @@ function NavBar() {
                     </ul>
 
                 </div>
-                
+
             </div>
             <li className="nav-item">
-                <a className="nav-link small-size-nav" href="#"><i className="fa-solid fa-bars fa-xl"></i></a>
+                <a className="show-friends-button nav-link small-size-nav" href="#"><i className="fa-solid fa-bars fa-xl"></i></a>
             </li>
         </nav>)
 }

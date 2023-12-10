@@ -24,29 +24,37 @@ function Posts() {
     // console.log(posts);
 
     return (
-
         <section className="my-posts text-center col-lg-6 col-md-8 col-sm-12">
-            <div className="top-posts text-primary"><h1>Top Posts</h1></div><hr className="text-primary" />
-            {posts.map((post) => {
-                const user = users.find((user) => user.id === post.userId);
+            <div className="top-posts text-primary">
+                <h1>Top Posts</h1>
+            </div>
+            <hr className="text-primary" />
+            {posts.length > 0 ? (
+                posts.map((post) => {
+                    const user = users.find((user) => user.id === post.userId);
 
-                if (user) {
-                    return (
-                        <div className="user-posts" key={post.id}>
-                            <div className="name-pfp">
-                                <img src={user.image} alt={user.name} />
-                                <h2>{user.firstName} {user.lastName}</h2>
+                    if (user) {
+                        return (
+                            <div className="user-posts" key={post.id}>
+                                <div className="name-pfp">
+                                    <img src={user.image} alt={user.name} />
+                                    <h2>
+                                        {user.firstName} {user.lastName}
+                                    </h2>
+                                </div>
+                                <h4>{post.title}</h4>
+                                <p>{post.body}</p>
+                                <p>{post.tags.join("     ---- ")}</p>
                             </div>
-                            <h4>{post.title}</h4>
-                            <p>{post.body}</p>
-                            <p>{post.tags.join('     ---- ')}</p>
-                        </div>
-                    );
-                }
+                        );
+                    }
 
-                return null;
-            })}
+                    return null;
+                })
+            ) : (
+                <p>Loading posts...</p>
+            )}
         </section>
-    )
+    );
 }
 export default Posts
