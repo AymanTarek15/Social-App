@@ -1,4 +1,13 @@
-function NavBar() {
+import React, { useState } from "react";
+import Friends from "./Friends";
+function NavBar({ showFriends, setShowFriends }) {
+    // const [showFriends, setShowFriends] = useState(true);
+
+    const handleToggleFriends = () => {
+        setShowFriends((prevShowFriends) => !prevShowFriends);
+        console.log("showFriends:", !showFriends);
+    };
+
     return (
         <nav className="navbar navbar-expand-lg bg-body-dark">
             <div className="container-fluid nav-comp">
@@ -28,9 +37,9 @@ function NavBar() {
                 </div>
                 <div className="right-icons collapse navbar-collapse">
                     <ul className="navbar-nav">
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <a className="nav-link" href="#"><i className="fa-solid fa-bars fa-xl"></i></a>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <a className="nav-link" href="#"><i className="fa-brands fa-facebook-messenger fa-xl"></i></a>
                         </li>
@@ -38,13 +47,13 @@ function NavBar() {
                             <a className="nav-link" href="#"><i className="fa-solid fa-bell fa-xl"></i></a>
                         </li>
                     </ul>
-
                 </div>
 
             </div>
-            <li className="nav-item">
+            <li onClick={handleToggleFriends} className="nav-item">
                 <a className="show-friends-button nav-link small-size-nav" href="#"><i className="fa-solid fa-bars fa-xl"></i></a>
             </li>
+
         </nav>)
 }
 export default NavBar

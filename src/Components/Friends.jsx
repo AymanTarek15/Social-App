@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-function Friends() {
+function Friends({showFriends}) {
     const [users, setUsers] = useState([]);
     const [clickedFriendMessage, setClickedFriendMessage] = useState(null);
     const [input, setInput] = useState("")
@@ -42,7 +42,7 @@ function Friends() {
         }
     };
     return (
-        <section className="my-friends col-md-4 col-lg-3" id="my-friends">
+        <section className={`my-friends col-md-4 col-lg-3 ${showFriends ? "show" : "hide"} ${window.innerWidth < 768 ? "fixed" : ""}`} id="my-friends">
             <div className="upper-contacts">
                 <div>
                     <h2 className="text-primary">Contacts</h2>
@@ -90,9 +90,9 @@ function Friends() {
                         {messageSent.map((message, index) => (
                             <p className="bg-primary message-sent" key={index}>{message}</p>
                         ))}
-
+                        
                     </div>
-
+                   
                     <div className="messaging-input">
                         <input onChange={handleInputChange} onKeyDown={handleKeyPress} type="text" name="" id="" value={input} />
                         <button ref={yourButtonRef} onClick={handleSendClick}><i className="fa-solid fa-paper-plane text-primary"></i></button>

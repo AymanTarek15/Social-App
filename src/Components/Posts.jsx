@@ -29,7 +29,7 @@ function Posts() {
                 <h1>Top Posts</h1>
             </div>
             <hr className="text-primary" />
-            {posts.length > 0 ? (
+            {posts && posts.length > 0 ? (
                 posts.map((post) => {
                     const user = users.find((user) => user.id === post.userId);
 
